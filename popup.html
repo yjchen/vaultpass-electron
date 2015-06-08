@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Vaultpass</title>
+    <link href="vaultpass.css" rel="stylesheet">
+    <link href="lib/square/red.css" rel="stylesheet">
+<!--
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="lib/crypto-js-3.1.2.js"></script>
+    <script type="text/javascript" src="lib/icheck.min.js"></script>
+    <script type="text/javascript" src="lib/vault.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+-->
+  </head>
+  <body>
+    <div id="container">
+      <p id="error"></p>
+      <div id="controls">
+        <p class="small-bottom-margin">Domain:</p>
+        <input id="domain" class="small-top-margin" type="text" />
+        <p class="small-bottom-margin">Passphrase:</p>
+        <input id="key" class="small-top-margin" type="password" />
+        <p class="small-bottom-margin password-mode-off">Hash:</p>
+        <input id="hash" class="small-top-margin password-mode-off" type="text" readonly="true" />
+        <p class="fill-instruction password-mode-on">Press <strong>ENTER</strong> to fill in the password field.</p>
+        <p class="pre-instruction password-mode-off"><strong>TIP:</strong> Select a password field first.</p>
+        <ul>
+          <li class="small-top-margin">
+            <input type="radio" name="password_choice" id="password_choice_16" checked>
+            <label for="password_choice_16">16 letters, numbers &amp; symbols</label>
+          </li>
+          <li class="small-top-margin">
+            <input type="radio" name="password_choice" id="password_choice_12">
+            <label for="password_choice_12">12 letters, numbers &amp; symbols</label>
+          </li>
+          <li class="small-top-margin">
+            <input type="radio" name="password_choice" id="password_choice_10">
+            <label for="password_choice_10">10 letters &amp; numbers</label>
+          </li>
+          <li class="small-top-margin">
+            <input type="radio" name="password_choice" id="password_choice_8">
+            <label for="password_choice_8">8 numbers</label>
+          </li>
+          <li class="small-top-margin">
+            <input type="radio" name="password_choice" id="password_choice_30">
+            <label for="password_choice_30">30 letters, numbers &amp; symbols</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  <script>
+    window.$ = window.jQuery = require('./jquery.js');
+    require ('./lib/crypto-js-3.1.2.js');
+    require ('./lib/icheck.min.js');
+    window.Vault = require ('./lib/vault.js');
+    require ('./popup.js');
+  </script>
+  </body>
+</html>
